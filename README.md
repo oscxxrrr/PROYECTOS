@@ -1,4 +1,3 @@
-Aquí tienes una propuesta lista para copiar y pegar en tu archivo README.md para el repositorio que compartes con tu compañero Adrián Trujillo:
 🚀 Repositorio de Creación de Aplicaciones
 
 Repositorio colaborativo de desarrollo de software creado por Óscar y Adrián Trujillo para diseñar, alojar y gestionar proyectos prácticos de programación.
