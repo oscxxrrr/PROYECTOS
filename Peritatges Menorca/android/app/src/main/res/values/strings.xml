@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">Peritatges Menorca</string>
+    <string name="title_activity_main">Peritatges Menorca</string>
+    <string name="package_name">com.peritatgesmenorca.app</string>
+    <string name="custom_url_scheme">com.peritatgesmenorca.app</string>
+</resources>

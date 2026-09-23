@@ -1,0 +1,42 @@
+# Configuración optimizada y 100% compatible con InfinityFree Free Tier
+RewriteEngine On
+RewriteBase /
+
+# No hay backend en hosting estático: responder 404 en JSON a peticiones /api
+RewriteRule ^api/ - [R=404,L]
+
+# SPA Routing: Si no es archivo ni carpeta real, servir index.html
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^ index.html [L,QSA]
+
+# MIME Types correctos para módulos JS, PWA y descarga de APK
+<IfModule mod_mime.c>
+  AddType application/javascript .js .mjs
+  AddType text/css .css
+  AddType image/svg+xml .svg
+  AddType image/png .png
+  AddType image/jpeg .jpg .jpeg
+  AddType image/webp .webp
+  AddType image/x-icon .ico
+  AddType application/manifest+json .webmanifest
+  AddType application/json .json
+  AddType application/wasm .wasm
+  AddType application/vnd.android.package-archive .apk
+</IfModule>
+
+# Caché: index.html siempre fresco para evitar versiones desactualizadas
+<IfModule mod_headers.c>
+  <FilesMatch "\.(js|css|svg|png|jpg|jpeg|webp|ico|webmanifest|wasm|apk)$">
+    Header set Cache-Control "public, max-age=604800, stale-while-revalidate=86400"
+  </FilesMatch>
+  <FilesMatch "^(index\.html|sw\.js)$">
+    Header set Cache-Control "no-cache, no-store, must-revalidate"
+    Header set Pragma "no-cache"
+    Header set Expires 0
+  </FilesMatch>
+  # Permitir descargas directas de APK
+  <FilesMatch "\.apk$">
+    Header set Content-Disposition "attachment"
+  </FilesMatch>
+</IfModule>

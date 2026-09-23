@@ -1,0 +1,18 @@
+{
+  "name": "PERITATGES MENORCA",
+  "short_name": "Peritatges",
+  "description": "Aplicación profesional para peritos de vehículos",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#f8fafc",
+  "theme_color": "#0284c7",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/icons/icon.svg",
+      "sizes": "192x192 512x512",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}
