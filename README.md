@@ -4,7 +4,7 @@ Aquí tienes una propuesta lista para copiar y pegar en tu archivo README.md par
 Repositorio colaborativo de desarrollo de software creado por Óscar y Adrián Trujillo para diseñar, alojar y gestionar proyectos prácticos de programación.
 👥 Autores
 
-    Óscar
+    Óscar Martinez
 
     Adrián Trujillo
 
